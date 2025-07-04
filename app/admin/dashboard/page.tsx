@@ -83,12 +83,12 @@ export default function DashboardPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-900 to-cyan-900 p-4">
       <div className="container mx-auto">
-        <div className="flex justify-between items-center mb-8">
+        <div className="flex flex-col md:flex-rowjustify-between items-center mb-8">
           <div>
             <h1 className="text-3xl font-bold text-white">Panel de Administración</h1>
             {user && <p className="text-blue-200 mt-1">Bienvenido, {user.username}</p>}
           </div>
-          <div className="flex gap-2">
+          <div className="flex flex-col gap-2">
 
           <Button variant="outline" onClick={handleLogout} className="bg-white text-gray-800 hover:bg-gray-100">
             <LogOut className="w-4 h-4 mr-2" />
