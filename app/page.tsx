@@ -20,6 +20,7 @@ import {
 import ServicesSection from "@/components/services-section";
 import GallerySection from "@/components/gallery-section";
 import ProductSection from "@/components/product-section";
+import Link from "next/link";
 
 
 
@@ -35,37 +36,25 @@ export default async function HomePage() {
       {/* Botón de Login Flotante */}
       <LoginButton />
    
-      
-      {/* Advertencia de datos mock (solo en desarrollo) */}
-      {showMockWarning && process.env.NODE_ENV === "development" && (
-        <div className="fixed top-16 right-4 z-40 bg-yellow-100 border border-yellow-400 text-yellow-800 px-4 py-2 rounded-lg shadow-lg max-w-sm">
-          <div className="flex items-center gap-2">
-            <AlertCircle className="w-4 h-4" />
-            <span className="text-sm font-medium">Usando datos de ejemplo</span>
-          </div>
-          <p className="text-xs mt-1">
-            Configura DATABASE_URL para conectar a tu BD
-          </p>
-        </div>
-      )}
+
 
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center text-white">
-        <div className="absolute inset-0 bg-black/50 z-10"></div>
-        <div className="absolute inset-0">
+      <section className="relative md:h-screen h-[60vh] flex items-center justify-center text-white bg-white">
+        {/* <div className="absolute inset-0 bg-black/50 z-10"></div> */}
+        <div className="absolute inset-0 bg-gradient-to-tb from-blue-900/20 to-gray-200 backdrop-blur-sm">
           <Image
-            src="/placeholder.svg?height=1080&width=1920"
+            src="/pircing-hero.png"
             alt="Piercing Studio"
             fill
-            className="object-cover"
+            className="object-contain  "
             priority
           />
         </div>
         <FadeInOnScroll className="relative z-20 text-center px-4">
-          <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+          <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r  from-blue-400 to-cyan-400 bg-clip-text text-transparent">
             BLUE MOON STUDIO
           </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto   backdrop-blur-sm rounded-sm text-black ">
             Arte corporal profesional con los más altos estándares de calidad y
             seguridad
           </p>
@@ -109,8 +98,7 @@ export default async function HomePage() {
                   profesionales.
                 </p>
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  Cada perforación es realizada por artistas certificados que se
-                  especializan en crear experiencias seguras y cómodas para
+                  Me especializo  en crear experiencias seguras y cómodas para
                   nuestros clientes. Tu seguridad y satisfacción son nuestra
                   prioridad número uno.
                 </p>
@@ -184,25 +172,25 @@ export default async function HomePage() {
             <SlideInFromLeft>
               <div className="space-y-8">
                 <div className="flex items-center gap-4">
-                  <MapPin className="w-8 h-8 text-blue-600" />
+                  <MapPin className="w-8 h-8 text-blue-600 min-w-8 min-h-8" />
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-800">
+                    <h3 className="text-xl font-semibold text-gray-800 ">
                       Dirección
                     </h3>
-                    <p className="text-gray-600">
-                      Calle Principal 123, Centro, Ciudad
+                    <p className="text-gray-600 ">
+                      Calzada del cerro / monasterio y Churruca , #2061 punto de referencia pediátrico del cerro (Las católicas)
                     </p>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-4" >
                   <Phone className="w-8 h-8 text-blue-600" />
-                  <div>
+                  <Link href="https://wa.me//58951203">
                     <h3 className="text-xl font-semibold text-gray-800">
                       Teléfono
                     </h3>
-                    <p className="text-gray-600">+1 (555) 123-4567</p>
-                  </div>
+                    <p className="text-gray-600">+53 58951203</p>
+                  </Link> 
                 </div>
 
                 <div className="flex items-center gap-4">
@@ -266,7 +254,7 @@ export default async function HomePage() {
       <footer className="bg-gray-900 text-white py-8">
         <div className="container mx-auto px-4 text-center">
           <p className="text-lg font-semibold mb-2">BLUE MOON STUDIO</p>
-          <p className="text-gray-400">© 2024 Todos los derechos reservados</p>
+          <p className="text-gray-400">© 2025 Todos los derechos reservados</p>
         </div>
       </footer>
     </div>

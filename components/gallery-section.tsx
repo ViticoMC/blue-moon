@@ -76,9 +76,7 @@ const [gallery, setGallery] = useState<GalleryItem[]>([]);
           {gallery.length === 0 && (
             <div className="text-center text-white">
               <p className="text-xl">No hay fotos disponibles</p>
-              <p className="text-blue-200 mt-2">
-                Configura tu base de datos para mostrar la galería real
-              </p>
+              
             </div>
           )}
         </div>

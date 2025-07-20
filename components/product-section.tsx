@@ -92,9 +92,7 @@ export default function ProductSection() {
               {products.length === 0 && (
                 <div className="text-center text-gray-600">
                   <p className="text-xl">No hay productos disponibles</p>
-                  <p className="text-gray-500 mt-2">
-                    Configura tu base de datos para mostrar productos reales
-                  </p>
+                 
                 </div>
               )}
             </div>

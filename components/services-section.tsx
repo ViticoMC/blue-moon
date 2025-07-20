@@ -88,9 +88,6 @@ export default function ServicesSection() {
               {services.length === 0 && (
                 <div className="text-center text-white">
                   <p className="text-xl">No hay servicios disponibles</p>
-                  <p className="text-blue-200 mt-2">
-                    Configura tu base de datos para mostrar servicios reales
-                  </p>
                 </div>
               )}
             </div>
