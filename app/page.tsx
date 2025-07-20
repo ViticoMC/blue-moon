@@ -25,7 +25,7 @@ import Link from "next/link";
 
 
 export default async function HomePage() {
-  
+
 
   // Verificar si hay conexión a BD
   const hasDbConnection = process.env.DATABASE_URL || process.env.POSTGRES_URL;
@@ -35,7 +35,7 @@ export default async function HomePage() {
     <div className="min-h-screen">
       {/* Botón de Login Flotante */}
       <LoginButton />
-   
+
 
 
       {/* Hero Section */}
@@ -62,13 +62,13 @@ export default async function HomePage() {
             <Badge className="text-lg px-6 py-2 bg-blue-600 hover:bg-blue-700">
               <a href="#servicios">
 
-              Servicios
+                Servicios
               </a>
             </Badge>
             <Badge className="text-lg px-6 py-2 bg-cyan-600 hover:bg-cyan-700">
               <a href="#productos">
 
-              Productos
+                Productos
               </a>
             </Badge>
           </div>
@@ -150,14 +150,14 @@ export default async function HomePage() {
       </section>
 
       {/* Services Section */}
-      <ServicesSection/>
+      <ServicesSection />
 
       {/* Products Section */}
       <ProductSection />
-     
+
 
       {/* Gallery Section */}
-      <GallerySection/>
+      <GallerySection />
 
       {/* Contact Section */}
       <section className="py-20 bg-white/95 backdrop-blur-sm">
@@ -190,7 +190,7 @@ export default async function HomePage() {
                       Teléfono
                     </h3>
                     <p className="text-gray-600">+53 58951203</p>
-                  </Link> 
+                  </Link>
                 </div>
 
                 <div className="flex items-center gap-4">
@@ -210,9 +210,9 @@ export default async function HomePage() {
                       Horarios
                     </h3>
                     <p className="text-gray-600">
-                      Lun - Sáb: 10:00 AM - 8:00 PM
+                      Lun - Dom: 10:00 AM - 5:00 PM
                     </p>
-                    <p className="text-gray-600">Dom: 12:00 PM - 6:00 PM</p>
+                    {/* <p className="text-gray-600">Dom: 12:00 PM - 6:00 PM</p> */}
                   </div>
                 </div>
               </div>
