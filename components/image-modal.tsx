@@ -1,8 +1,7 @@
 "use client"
 
-import { useState } from "react"
+import { Dialog, DialogContent, DialogTrigger, DialogTitle } from "@/components/ui/dialog"
 import Image from "next/image"
-import { X } from "lucide-react"
 
 interface ImageModalProps {
   src: string
@@ -11,38 +10,30 @@ interface ImageModalProps {
 }
 
 export function ImageModal({ src, alt, className = "" }: ImageModalProps) {
-  const [isOpen, setIsOpen] = useState(false)
-
   return (
-    <>
-      <Image
-        src={src || "/placeholder.svg"}
-        alt={alt}
-        width={300}
-        height={300}
-        className={`cursor-pointer hover:opacity-80 transition-opacity ${className}`}
-        onClick={() => setIsOpen(true)}
-      />
-
-      {isOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4">
-          <div className="relative max-w-4xl max-h-full">
-            <button
-              onClick={() => setIsOpen(false)}
-              className="absolute -top-10 right-0 text-white hover:text-gray-300"
-            >
-              <X size={32} />
-            </button>
-            <Image
-              src={src || "/placeholder.svg"}
-              alt={alt}
-              width={800}
-              height={800}
-              className="max-w-full max-h-full object-contain"
-            />
-          </div>
+    <Dialog>
+      <DialogTrigger asChild>
+        <Image
+          src={src || "/placeholder.svg"}
+          alt={alt}
+          width={400}
+          height={400}
+          className={`cursor-pointer hover:opacity-90 transition-all duration-300 rounded-lg hover:scale-[1.02] ${className}`}
+        />
+      </DialogTrigger>
+      <DialogContent className="max-w-[95vw] md:max-w-4xl p-0 border-none bg-transparent shadow-none flex items-center justify-center">
+        <DialogTitle className="sr-only">{alt}</DialogTitle>
+        <div className="relative w-full h-[85vh] flex items-center justify-center">
+          <Image
+            src={src || "/placeholder.svg"}
+            alt={alt}
+            fill
+            className="object-cover"
+            priority
+            sizes="(max-width: 768px) 95vw, 80vw"
+          />
         </div>
-      )}
-    </>
+      </DialogContent>
+    </Dialog>
   )
 }
