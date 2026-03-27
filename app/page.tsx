@@ -43,18 +43,17 @@ export default async function HomePage() {
         {/* <div className="absolute inset-0 bg-black/50 z-10"></div> */}
         <div className="absolute inset-0 bg-gradient-to-tb from-blue-900/20 to-gray-200 backdrop-blur-sm">
           <Image
-            src="/pircing-hero.png"
+            src="/hero-main.webp"
             alt="Piercing Studio"
             fill
-            className="object-contain  "
-            priority
+            className="object-scale-down  "
           />
         </div>
         <FadeInOnScroll className="relative z-20 text-center px-4">
           <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r  from-blue-400 to-cyan-400 bg-clip-text text-transparent">
             BLUE MOON STUDIO
           </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto   backdrop-blur-sm rounded-sm text-black ">
+          <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto   backdrop-blur-sm rounded-sm  ">
             Arte corporal profesional con los más altos estándares de calidad y
             seguridad
           </p>
