@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { Metadata } from 'next'
 import {
   FadeInOnScroll,
   SlideInFromLeft,
@@ -22,7 +23,15 @@ import GallerySection from "@/components/gallery-section";
 import ProductSection from "@/components/product-section";
 import Link from "next/link";
 
-
+export const metadata: Metadata = {
+  title: 'Blue Moon Studio - Perforaciones Corporales Profesionales | Piercing',
+  description: 'Estudio profesional de perforaciones corporales en español. Más de 10 años de experiencia, máximos estándares de higiene y seguridad. +500 clientes satisfechos.',
+  openGraph: {
+    title: 'Blue Moon Studio - Perforaciones Corporales Profesionales',
+    description: 'Estudio profesional de perforaciones corporales con los más altos estándares de calidad y seguridad.',
+    type: 'website',
+  },
+}
 
 export default async function HomePage() {
 
