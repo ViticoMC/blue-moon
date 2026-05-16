@@ -5,7 +5,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: ["/admin/login", "/admin/dashboard"],
+      disallow: ["/admin"],
     },
     sitemap: "https://blue-moon-snowy.vercel.app/sitemap.xml",
   };

@@ -3,17 +3,10 @@
 
 User-agent: *
 Allow: /
-Allow: /admin/productos
-Allow: /admin/servicios
-Allow: /admin/galeria
-
-# No permitir indexación de áreas administrativas privadas
-Disallow: /admin/login
-Disallow: /admin/dashboard
-Disallow: /api/
+Disallow: /admin
 
 # Sitemap
 Sitemap: https://blue-moon-snowy.vercel.app/sitemap.xml
 
-# Crawl delay (opcional, ayuda a no sobrecargar servidor)
+# Crawl delay
 Crawl-delay: 1
