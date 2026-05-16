@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://blue-moon-snowy.vercel.app/"; // Reemplaza con tu dominio real
+  const baseUrl = "https://blue-moon-snowy.vercel.app";
 
   return [
     {
